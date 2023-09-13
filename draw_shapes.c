@@ -26,3 +26,26 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints an arrow of int size
+void print_arrow(int size){
+
+  //Arrow head
+  for(int i = 1; i <= size; i++){
+    for (int j = size; j > i; j--){
+      putchar(' ');
+    }
+    for(int j = 1;j <= 2 * i - 1; j++){
+    putchar('*');
+    }
+    putchar('\n');
+ }
+
+  //Arrow tail
+  for(int i = 1; i <= size; i++){
+    for(int j = 1; j < size; j++){
+      putchar(' ');
+    }
+    putchar('*');
+    putchar('\n');
+  }
+}
